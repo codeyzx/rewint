@@ -1,16 +1,24 @@
-# quizzle
+# Rewint
 
-A new Flutter project.
+Short description
 
-## Getting Started
+Rewint is an interactive application to improve children's logic skills combined with a Machine Learning system.
 
-This project is a starting point for a Flutter application.
+This application is based on research that many Indonesian children have difficulty reading and understanding mathematics. For that, we have come to bring a solution in the form of an application that can help children understand basic things.
 
-A few resources to get you started if this is your first Flutter project:
+Rewint Features
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+1. Alphabet trainer using handwritten recognition
+The user is instructed to write the letters ordered on the page.
+2. Guess the picture
+The user is instructed to choose the right option from the images displayed on the page.
+3. Basic math
+Users are instructed to choose the right option from basic math questions.
+4. Speech to text
+Users are instructed to spell the words displayed on the page.
+5. Object detection
+The user is able to determine the type of object that is directed by the camera.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+Target users
+Kindergarten, pre-kindergarten, and students who have problems cannot read or write. The features of the Rewint application and Machine Learning system will help them give a new nuance in learning
