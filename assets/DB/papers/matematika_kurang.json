@@ -1,0 +1,116 @@
+{
+    "id": "ppr002",
+    "title": "Pengurangan",
+    "image_url": "",
+    "Description": "Belajar pengurangan dengan mudah dan menyenangkan",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "ppr002q001",
+            "question": "Sebuah pohon apel memiliki 12 buah apel, lalu 3 dari apel tersebut jatuh. Maka berapa sisa apel yang ada di pohon?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "3"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "9"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "10"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr002q002",
+            "question": "Adi memiliki 5 buah permen, 2 diantaranya diberikan kepada Rudi. Berapa sisa permen Adi yang tersisa?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "3"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "4"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr002q003",
+            "question": "Adi sekarang memiliki 3 buah permen, dan diberikan 1 kepada Joni. Berapa sisa permen Adi?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "3"
+                },
+                {
+                    "identifier": "A",
+                    "Answer": "0"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr002q004",
+            "question": "10-4 = ...",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "4"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "8"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr002q005",
+            "question": "10.000 - 2.500 = ...",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2.500"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "5.000"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "7.500"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "9.500"
+                }
+            ],
+            "correct_answer": "C"
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "id": "ppr004",
+    "title": "Pembagian",
+    "image_url": "",
+    "Description": "Belajar pembagian dengan mudah dan menyenangkan",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "ppr004q001",
+            "question": "Adi, Ahmad, dan Joni mendapatkan 9 buah permen dari Nenek. Agar adil, berapa banyak permen yang harus diambil oleh setiap orang?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "3"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "4"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "5"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "6"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q002",
+            "question": "Sebuah angka bila dikali dengan 4 akan menghasilkan angka 18. Berapakah angka tersebut?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "3"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "9"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr004q002",
+            "question": "33 : 3 = ...",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "11"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "12"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "13"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr004q003",
+            "question": "Berapa hasil dari 36 : 3 ?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "11"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "12"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "13"
+                }
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr004q004",
+            "question": "Suatu bilangan bila dibagi dengan 5 akan menghasilkan 8, berapakah bilangan yang dimaksud?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "30"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "35"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "40"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "45"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr004q005",
+            "question": "Berapa hasil 21 dibagi 3?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "5"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "7"
+                }
+            ],
+            "correct_answer": "C"
+        }
+    ]
+}

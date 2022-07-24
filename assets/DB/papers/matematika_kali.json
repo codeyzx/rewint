@@ -1,0 +1,63 @@
+{
+    "id": "ppr003",
+    "title": "Perkalian",
+    "image_url": "",
+    "Description": "Belajar perkalian dengan mudah dan menyenangkan dengan rewint",
+    "time_seconds": 900,
+
+    "questions" : [
+        {
+            "id": "ppr003q001",
+            "question": "Joni dan Ahmad masing-masing memiliki 3 buah jeruk. Ada berapa buah jeruk yang dimiliki oleh mereka berdua?",
+            "answers": [
+                {"identifier": "A", "Answer": "6"},
+                {"identifier": "B", "Answer": "7"},
+                {"identifier": "C", "Answer": "8"},
+                {"identifier": "D", "Answer": "9"}
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr003q002",
+            "question": "Sebuah bilangan bila dikali dengan 3 akan menghasilkan 12, berapakah bilangan tersebut?",
+            "answers": [
+                {"identifier": "A", "Answer": "3"},
+                {"identifier": "B", "Answer": "4"},
+                {"identifier": "C", "Answer": "5"},
+                {"identifier": "D", "Answer": "6"}
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr003q003",
+            "question": "4 x 3 bila diuraikan dalam penjumlahan berarti",
+            "answers": [
+                {"identifier": "A", "Answer": "3+3+3"},
+                {"identifier": "B", "Answer": "4+4+4"}
+            ],
+            "correct_answer": "B"
+        },
+        {
+            "id": "ppr003q004",
+            "question": "12x4 = ...",
+            "answers": [
+                {"identifier": "A", "Answer": "24"},
+                {"identifier": "B", "Answer": "36"},
+                {"identifier": "C", "Answer": "48"},
+                {"identifier": "D", "Answer": "60"}
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr003q005",
+            "question": "Berapa hasil dari 12x3-2",
+            "answers": [
+                {"identifier": "A", "Answer": "34"},
+                {"identifier": "B", "Answer": "12"},
+                {"identifier": "C", "Answer": "24"},
+                {"identifier": "D", "Answer": "58"}
+            ],
+            "correct_answer": "A"
+        }
+    ]
+}

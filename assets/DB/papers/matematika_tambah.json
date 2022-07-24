@@ -1,0 +1,124 @@
+{
+    "id": "ppr001",
+    "title": "Pertambahan",
+    "image_url": "",
+    "Description": "Belajar penjumlahan dengan mudah dan menyenangkan dengan rewint",
+    "time_seconds": 900,
+    "questions": [
+        {
+            "id": "ppr001q001",
+            "question": "Rudi memiliki 2 permen, lalu Adi memberikan 3 permen kepada Rudi. Berapa total permen Rudi sekarang?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "5"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "7"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "8"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr001q002",
+            "question": "Angka yang jika dikurangi 5 akan menghasilkan 10?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "15"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "20"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "25"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "30"
+                }
+            ],
+            "correct_answer": "A"
+        },
+        {
+            "id": "ppr003q003",
+            "question": "Ibu memiliki buah apel sebanyak 8 buah, lalu Ibu membeli lagi 9 buah apel. Berapa jumlah buah apel Ibu?",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2 Buah"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "3 Buah"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "17 Buah"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "6 Buah"
+                }
+            ],
+            "correct_answer": "C"
+        },
+        {
+            "id": "ppr001q004",
+            "question": "17 + 5 = ...",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "6"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "1"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "8"
+                }
+            ],
+            "correct_answer": "D"
+        },
+        {
+            "id": "ppr001q005",
+            "question": "0.214 + 0.215 = ...",
+            "answers": [
+                {
+                    "identifier": "A",
+                    "Answer": "2"
+                },
+                {
+                    "identifier": "B",
+                    "Answer": "5"
+                },
+                {
+                    "identifier": "C",
+                    "Answer": "7"
+                },
+                {
+                    "identifier": "D",
+                    "Answer": "3"
+                }
+            ],
+            "correct_answer": "D"
+        }
+    ]
+}
