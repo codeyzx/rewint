@@ -2,9 +2,9 @@
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
 // import 'package:get/get.dart';
 // import 'package:hexcolor/hexcolor.dart';
-// import 'package:quizzle/configs/themes/app_colors.dart';
-// import 'package:quizzle/screens/alphabet/alphabet_test.dart';
-// import 'package:quizzle/screens/alphabet/alphabet_uppercase.dart';
+// import 'package:rewint/configs/themes/app_colors.dart';
+// import 'package:rewint/screens/alphabet/alphabet_test.dart';
+// import 'package:rewint/screens/alphabet/alphabet_uppercase.dart';
 // // ignore_for_file: prefer_const_constructors
 
 // class AlphabetCategoryPage extends StatefulWidget {
@@ -131,8 +131,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/themes/app_colors.dart';
-import 'package:quizzle/screens/alphabet/alphabet_screen.dart';
+import 'package:rewint/configs/themes/app_colors.dart';
+import 'package:rewint/screens/alphabet/alphabet_screen.dart';
 
 class AlphabetCategoryPage extends StatelessWidget {
   const AlphabetCategoryPage({Key? key}) : super(key: key);

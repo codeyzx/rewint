@@ -6,8 +6,8 @@ import 'package:flutter/services.dart';
 import 'package:google_mlkit_object_detection/google_mlkit_object_detection.dart';
 import 'package:path/path.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:quizzle/widgets/object_detection/camera_view.dart';
-import 'package:quizzle/widgets/object_detection/object_detector_painter.dart';
+import 'package:rewint/widgets/object_detection/camera_view.dart';
+import 'package:rewint/widgets/object_detection/object_detector_painter.dart';
 
 class ObjectDetectionScreen extends StatefulWidget {
   const ObjectDetectionScreen({Key? key}) : super(key: key);
@@ -42,7 +42,7 @@ class _ObjectDetectionScreen extends State<ObjectDetectionScreen> {
   @override
   Widget build(BuildContext context) {
     return CameraView(
-      title: 'Object Detector',
+      title: 'Mengenal Lingkungan',
       customPaint: _customPaint,
       text: _text,
       onImage: (inputImage) {

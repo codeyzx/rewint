@@ -9,10 +9,13 @@ final userFR = fi.collection('users');
 final quizePaperFR = fi.collection('quizpapers');
 final alphabetFR = fi.collection('alphabets');
 final leaderBoardFR = fi.collection('leaderboard');
+final shopFR = fi.collection('shop');
 
 DocumentReference recentQuizesData({required String userId, required String paperId}) => userFR.doc(userId).collection('myrecent_quizes').doc(paperId);
 
 CollectionReference<Map<String, dynamic>> recentQuizes({required String userId}) => userFR.doc(userId).collection('myrecent_quizes');
+
+CollectionReference<Map<String, dynamic>> shopData() => shopFR;
 
 CollectionReference<Map<String, dynamic>> getleaderBoard({required String paperId}) => leaderBoardFR.doc(paperId).collection('scores');
 

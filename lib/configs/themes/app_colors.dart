@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/configs.dart';
+import 'package:rewint/configs/configs.dart';
 
 // rewint theme
 Color colorMain = HexColor('#251ABE');
@@ -129,9 +129,6 @@ TextStyle navUnSelected = GoogleFonts.openSans(
   fontWeight: FontWeight.w400,
   letterSpacing: 1,
 );
-
-
-
 
 const kOnSurfaceTextColor = Colors.white;
 const kCorrectAnswerColor = Color.fromARGB(255, 0, 188, 100);

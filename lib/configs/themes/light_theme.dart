@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'sub_theme_data_mixin.dart';
 
-const Color kPrimayLightColorLT = Color.fromARGB(255, 175, 84, 255);
-const Color kPrimayColorLT = Color.fromARGB(255, 120, 30, 255);
+// const Color kPrimayLightColorLT = Color.fromARGB(255, 175, 84, 255);
+// const Color kPrimayColorLT = Color.fromARGB(255, 120, 30, 255);
+const Color kPrimayLightColorLT = Color.fromARGB(1, 37, 26, 190);
+const Color kPrimayColorLT = Color.fromARGB(1, 37, 26, 190);
 const Color appBarIconColorLT = Colors.white;
 const Color mainTextColorLT = Color.fromARGB(255, 40, 40, 40);
 const Color iconColorLT = Colors.white;
@@ -20,12 +23,13 @@ class LightTheme with SubThemeData {
         splashColor: kPrimayColorLT.withOpacity(0.1),
         highlightColor: kPrimayColorLT.withOpacity(0.05),
         splashFactory: InkRipple.splashFactory,
-        textTheme: getTextThemes().apply(bodyColor: mainTextColorLT, displayColor: mainTextColorLT),
-        primaryColor: kPrimayColorLT,
-        elevatedButtonTheme: ElevatedButtonThemeData(
-            style: getElavatedButtonTheme()),
+        textTheme: getTextThemes()
+            .apply(bodyColor: mainTextColorLT, displayColor: mainTextColorLT),
+        primaryColor: HexColor('#251ABE'),
+        elevatedButtonTheme:
+            ElevatedButtonThemeData(style: getElavatedButtonTheme()),
         cardColor: cardColorLT,
         colorScheme: ColorScheme.fromSwatch(
-            accentColor: kPrimayColorLT, primarySwatch: Colors.purple));
+            accentColor: kPrimayColorLT, primarySwatch: Colors.amber));
   }
 }

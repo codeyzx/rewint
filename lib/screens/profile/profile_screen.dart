@@ -1,11 +1,11 @@
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/auth_controller.dart';
-import 'package:quizzle/controllers/profile/profile_controller.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/auth_controller.dart';
+import 'package:rewint/controllers/profile/profile_controller.dart';
 
 class ProfileScreenYangBener extends GetView<ProfileController> {
   const ProfileScreenYangBener({Key? key}) : super(key: key);
@@ -14,9 +14,9 @@ class ProfileScreenYangBener extends GetView<ProfileController> {
 
   @override
   Widget build(BuildContext context) {
-    FirebaseFirestore fprofits = FirebaseFirestore.instance;
-
+    Get.put(ProfileController());
     final AuthController _auth = Get.find<AuthController>();
+    final email = _auth.getUser()?.email;
     return Scaffold(
       backgroundColor: colorMain,
       body: Container(
@@ -37,28 +37,52 @@ class ProfileScreenYangBener extends GetView<ProfileController> {
                 SizedBox(
                   height: 70.h,
                 ),
-                Container(
-                  width: 100.w,
-                  height: 100.h,
-                  decoration: const BoxDecoration(
-                      shape: BoxShape.circle, color: Colors.white),
-                  child: Center(
-                      child: _auth.getUser()?.photoURL == null
-                          ? Image.asset(
-                              'assets/images/robot.png',
-                              width: 63.w,
-                              height: 63.h,
-                              fit: BoxFit.cover,
-                            )
-                          : Image.network(
+                Center(
+                    child: _auth.getUser()?.photoURL == null
+                        ? ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.asset(
+                              'assets/images/anonymous.png',
+                              fit: BoxFit.fill,
+                            ),
+                          )
+                        : ClipRRect(
+                            borderRadius: BorderRadius.circular(100),
+                            child: Image.network(
                               _auth.getUser()!.photoURL!,
-                              width: 63.w,
-                              height: 63.h,
-                              fit: BoxFit.cover,
-                            )),
+                              fit: BoxFit.fill,
+                            ),
+                          )),
+                SizedBox(
+                  height: 10.h,
+                ),
+                GetBuilder<AuthController>(
+                  builder: (controller) => controller.getUser() == null
+                      ? ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.green)),
+                          onPressed: () {
+                            controller.siginInWithGoogle();
+                          },
+                          child: Text(
+                            'Masuk',
+                            style: GoogleFonts.poppins(color: Colors.white),
+                          ))
+                      : ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.red)),
+                          onPressed: () {
+                            controller.signOut();
+                          },
+                          child: Text(
+                            'Keluar',
+                            style: GoogleFonts.poppins(color: Colors.white),
+                          )),
                 ),
                 SizedBox(
-                  height: 20.h,
+                  height: 8.h,
                 ),
                 Text(
                   _auth.getUser()?.displayName ?? 'Anonymous',
@@ -106,10 +130,9 @@ class ProfileScreenYangBener extends GetView<ProfileController> {
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
                               Text(
-                                _auth.getUser()?.email == null
+                                email == null
                                     ? '0 Points'
-                                    : '${controller.users.value} Points',
-                                // '1000 Points',
+                                    : '${controller.points.value} Points',
                                 style: profileTotalPoint,
                                 textAlign: TextAlign.center,
                               ),
@@ -236,9 +259,11 @@ class ProfileScreenYangBener extends GetView<ProfileController> {
                                 SizedBox(
                                   height: 3.h,
                                 ),
-                                Text(
-                                  '5/10',
-                                  style: profileAchievNum,
+                                Obx(
+                                  () => Text(
+                                    '${controller.videoAccess.value}/10',
+                                    style: profileAchievNum,
+                                  ),
                                 ),
                                 SizedBox(
                                   height: 3.h,
@@ -326,7 +351,7 @@ class ProfileScreenYangBener extends GetView<ProfileController> {
                                   height: 3.h,
                                 ),
                                 Text(
-                                  '${controller.allRecentTest.length}/10',
+                                  '${controller.allRecentTest.length}/7',
                                   style: profileAchievNum,
                                 ),
                                 SizedBox(

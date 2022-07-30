@@ -36,7 +36,7 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return GetMaterialApp(
             navigatorKey: navigatorKey,
-            title: 'Flutter Demo',
+            title: 'Rewint',
             theme: Get.find<ThemeController>().getLightheme(),
             darkTheme: Get.find<ThemeController>().getDarkTheme(),
             getPages: AppRoutes.pages(),
@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
 
 Future<void> initFireBase() async {
   await Firebase.initializeApp(
-    name: 'quizzle-demo',
+    name: 'rewint',
     options: DefaultFirebaseOptions.currentPlatform,
   );
 }

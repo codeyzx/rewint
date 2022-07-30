@@ -1,10 +1,7 @@
-import 'dart:convert';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/firebase/references.dart';
-import 'package:quizzle/services/notification/notification_service.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/firebase/references.dart';
 
 extension QuizeResult on QuizController {
   int get correctQuestionCount => allQuestions
@@ -28,8 +25,9 @@ extension QuizeResult on QuizController {
   Future<void> saveQuizResults() async {
     var batch = fi.batch();
     User? _user = Get.find<AuthController>().getUser();
-    if (_user == null) return;
-    if (_user.email == null) return navigateToHome();
+    if (_user == null || _user.email == null || _user.isAnonymous) {
+      return navigateToHome();
+    }
 
     batch.set(
         userFR
@@ -55,13 +53,13 @@ extension QuizeResult on QuizController {
           "time": quizPaperModel.timeSeconds - remainSeconds
         });
     await batch.commit();
-    Get.find<NotificationService>().showQuizCompletedNotification(
-        id: 1,
-        title: quizPaperModel.title,
-        body:
-            'You have just got $points points for ${quizPaperModel.title} -  Tap here to view leaderboard',
-        imageUrl: quizPaperModel.imageUrl,
-        payload: json.encode(quizPaperModel.toJson()));
+    // Get.find<NotificationService>().showQuizCompletedNotification(
+    //     id: 1,
+    //     title: quizPaperModel.title,
+    //     body:
+    //         'You have just got $points points for ${quizPaperModel.title} -  Tap here to view leaderboard',
+    //     imageUrl: quizPaperModel.imageUrl,
+    //     payload: json.encode(quizPaperModel.toJson()));
     navigateToHome();
   }
 }

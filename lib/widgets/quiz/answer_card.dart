@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:quizzle/configs/configs.dart';
+import 'package:rewint/configs/configs.dart';
 
-enum AnswerStatus{
-  correct, wrong, answered, notanswered
-}
+enum AnswerStatus { correct, wrong, answered, notanswered }
 
 class AnswerCard extends StatelessWidget {
   const AnswerCard({
     Key? key,
     required this.answer,
-    this.isSelected = false, required this.onTap,
+    this.isSelected = false,
+    required this.onTap,
   }) : super(key: key);
 
   final String answer;
@@ -115,4 +114,3 @@ class NotAnswerCard extends StatelessWidget {
     );
   }
 }
-

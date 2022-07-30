@@ -1,16 +1,16 @@
 import 'package:get/get.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/screens/alphabet/alphabet_category.dart';
-import 'package:quizzle/screens/alphabet/alphabet_screen.dart';
-import 'package:quizzle/screens/handwriting/handwriting_screen.dart';
-import 'package:quizzle/screens/home/home_page.dart';
-import 'package:quizzle/screens/image_guess/image_guess_category_screen.dart';
-import 'package:quizzle/screens/math/math_category_screen.dart';
-import 'package:quizzle/screens/object_detection/object_detector_view.dart';
-import 'package:quizzle/screens/screens.dart';
-import 'package:quizzle/screens/word/word_category_screen.dart';
-import 'package:quizzle/screens/word/word_spell_screen.dart';
-import 'package:quizzle/widgets/botnavbar.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/screens/alphabet/alphabet_category.dart';
+import 'package:rewint/screens/alphabet/alphabet_screen.dart';
+import 'package:rewint/screens/handwriting/handwriting_screen.dart';
+import 'package:rewint/screens/home/home_page.dart';
+import 'package:rewint/screens/image_guess/image_guess_category_screen.dart';
+import 'package:rewint/screens/math/math_category_screen.dart';
+import 'package:rewint/screens/object_detection/object_detector_view.dart';
+import 'package:rewint/screens/screens.dart';
+import 'package:rewint/screens/word/word_category_screen.dart';
+import 'package:rewint/screens/word/word_spell_screen.dart';
+import 'package:rewint/widgets/botnavbar.dart';
 
 class AppRoutes {
   static List<GetPage> pages() => [

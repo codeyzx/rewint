@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/controllers/auth_controller.dart';
+import 'package:rewint/controllers/auth_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyDrawerController extends GetxController {
@@ -33,9 +33,9 @@ class MyDrawerController extends GetxController {
     _launch(emailLaunchUri.toString());
   }
 
-  void downloadSourceCode() {
-    _launch('https://github.com/CodeFoxLk/quizzle_public.git');
-  }
+  // void downloadSourceCode() {
+  //   _launch('https://github.com/CodeFoxLk/quizzle_public.git');
+  // }
 
   @override
   void onReady() {

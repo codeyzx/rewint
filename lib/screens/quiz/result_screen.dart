@@ -3,10 +3,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/screens/screens.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/screens/screens.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 import 'answer_check_screen.dart';
 
@@ -132,14 +132,17 @@ class Resultcreen extends GetView<QuizController> {
                         Expanded(
                             child: MainButton(
                           onTap: () async {
-                            if (currUser?.email?.isEmpty != null) {
-                              await users
-                                  .collection('users')
-                                  .doc(currUser?.email)
-                                  .update({
-                                'point': FieldValue.increment(result),
-                              });
+                            if (currUser?.isAnonymous == false) {
+                              if (currUser?.email?.isEmpty != null) {
+                                await users
+                                    .collection('users')
+                                    .doc(currUser?.email)
+                                    .update({
+                                  'point': FieldValue.increment(result),
+                                });
+                              }
                             }
+
                             controller.saveQuizResults();
                           },
                           title: 'Go to home',

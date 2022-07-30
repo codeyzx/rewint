@@ -47,30 +47,30 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBoclJcwoctD0KBSHhaBeVekdbQ2lo0AQo',
-    appId: '1:170754159887:web:91f43c6f8abb89dfa63a7a',
-    messagingSenderId: '170754159887',
-    projectId: 'quizzle-demo-9d60d',
-    authDomain: 'quizzle-demo-9d60d.firebaseapp.com',
-    storageBucket: 'quizzle-demo-9d60d.appspot.com',
-    measurementId: 'G-G93RBV17DQ',
+    apiKey: 'AIzaSyBHvkVLGOT6H8MJTGmRW6FPHZ353t3WsNM',
+    appId: '1:387456396160:web:bc776f33205d3cdf302f65',
+    messagingSenderId: '387456396160',
+    projectId: 'rewint-f218b',
+    authDomain: 'rewint-f218b.firebaseapp.com',
+    storageBucket: 'rewint-f218b.appspot.com',
+    measurementId: 'G-S318MRHB2Q',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAyzwFTXpqBkVKK4E6BSmNdgt9_r-gdfJ8',
-    appId: '1:170754159887:android:1ef8ec47d6aaab26a63a7a',
-    messagingSenderId: '170754159887',
-    projectId: 'quizzle-demo-9d60d',
-    storageBucket: 'quizzle-demo-9d60d.appspot.com',
+    apiKey: 'AIzaSyDrX8saw5JG330211LnwuTw-U-E5hby5r4',
+    appId: '1:387456396160:android:d8b5f7aea16f3d3a302f65',
+    messagingSenderId: '387456396160',
+    projectId: 'rewint-f218b',
+    storageBucket: 'rewint-f218b.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyDJtpcUel_GoHjQbOgprXfPlaje3KaAwL8',
-    appId: '1:170754159887:ios:797f862df599c81ea63a7a',
-    messagingSenderId: '170754159887',
-    projectId: 'quizzle-demo-9d60d',
-    storageBucket: 'quizzle-demo-9d60d.appspot.com',
-    iosClientId: '170754159887-22h800arlm77h6ak2mcdetlfoluqjnb6.apps.googleusercontent.com',
-    iosBundleId: 'com.codefox.quizzle',
+    apiKey: 'AIzaSyAGOKqvE_3u1bF1WzJymXUlUo_pgtcFqLU',
+    appId: '1:387456396160:ios:7872f50932244067302f65',
+    messagingSenderId: '387456396160',
+    projectId: 'rewint-f218b',
+    storageBucket: 'rewint-f218b.appspot.com',
+    iosClientId: '387456396160-8v5ghqis1nqapuvs8oeb7gk4b4bvmr7j.apps.googleusercontent.com',
+    iosBundleId: 'com.codefox.rewint',
   );
 }

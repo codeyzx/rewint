@@ -1,12 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'package:quizzle/firebase/references.dart';
-import 'package:quizzle/screens/screens.dart'
+import 'package:rewint/firebase/references.dart';
+import 'package:rewint/screens/screens.dart'
     show AppIntroductionScreen, HomeScreen, LoginScreen;
-import 'package:quizzle/utils/utils.dart';
-import 'package:quizzle/widgets/botnavbar.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/utils/utils.dart';
+import 'package:rewint/widgets/botnavbar.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class AuthController extends GetxController {
   @override
@@ -65,11 +65,16 @@ class AuthController extends GetxController {
   }
 
   Future<void> saveUser(GoogleSignInAccount account) async {
-    userFR.doc(account.email).set({
-      "email": account.email,
-      "name": account.displayName,
-      "profilepic": account.photoUrl
-    });
+    final checkUser = await userFR.doc(account.email).get();
+    if (checkUser.data() == null) {
+      userFR.doc(account.email).set({
+        "email": account.email,
+        "name": account.displayName,
+        "profilepic": account.photoUrl,
+        "point": 0,
+        "videoAccess": 0
+      });
+    }
   }
 
   User? getUser() {
@@ -82,7 +87,7 @@ class AuthController extends GetxController {
   }
 
   void navigateToHome() {
-    Get.offAllNamed(HomeScreen.routeName);
+    Get.offAllNamed(BotNavBar.routeName);
   }
 
   void navigateToLogin() {

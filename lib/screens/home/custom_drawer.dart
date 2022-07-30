@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/screens/auth_and_profile/profile_screen.dart';
-import 'package:quizzle/screens/handwriting/handwriting_screen.dart';
-import 'package:quizzle/screens/object_detection/object_detector_view.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/screens/auth_and_profile/profile_screen.dart';
+import 'package:rewint/screens/handwriting/handwriting_screen.dart';
+import 'package:rewint/screens/object_detection/object_detector_view.dart';
 
 class CustomDrawer extends GetView<MyDrawerController> {
   const CustomDrawer({Key? key}) : super(key: key);

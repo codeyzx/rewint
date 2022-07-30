@@ -8,9 +8,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_tts/flutter_tts.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/themes/app_colors.dart';
-import 'package:quizzle/models/alphabet_model.dart';
-import 'package:quizzle/screens/home/home_page.dart';
+import 'package:rewint/configs/themes/app_colors.dart';
+import 'package:rewint/models/alphabet_model.dart';
+import 'package:rewint/widgets/botnavbar.dart';
 import 'package:speech_to_text/speech_recognition_result.dart';
 import 'package:speech_to_text/speech_to_text.dart';
 
@@ -111,6 +111,7 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
         onStatus: statusListener,
         debugLogging: true,
       );
+
       if (hasSpeech) {
         print('MASUK HASSPEECH');
         // Get the list of languages installed on the supporting platform so they
@@ -151,16 +152,9 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
   void resultListener(SpeechRecognitionResult result) {
     setState(() {
       lastWords = result.recognizedWords;
-      // lastWords = '${result.recognizedWords} - ${result.finalResult}';
-    });
-  }
-
-  void statusListener(String status) {
-    setState(() {
-      lastStatus = status;
     });
 
-    if (lastStatus == 'done') {
+    if (result.finalResult) {
       isWords
           ? lastWords.toLowerCase() == words[_index].answer
               ? currUser?.email?.isEmpty == null
@@ -293,6 +287,12 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
     }
   }
 
+  void statusListener(String status) {
+    setState(() {
+      lastStatus = status;
+    });
+  }
+
   void soundLevelListener(double level) {
     minSoundLevel = min(minSoundLevel, level);
     maxSoundLevel = max(maxSoundLevel, level);
@@ -373,7 +373,7 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: SizedBox(
-                      width: 1000.w,
+                      width: 420.w,
                       height: 50.h,
                       child: ListView.builder(
                           physics: const NeverScrollableScrollPhysics(),
@@ -505,7 +505,7 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
                       children: [
                         InkWell(
                           onTap: () {
-                            Get.offNamed(HomePage.routeName);
+                            Get.offAllNamed(BotNavBar.routeName);
                           },
                           child: Container(
                             width: 49.w,
@@ -598,7 +598,7 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: SizedBox(
-                      width: 1000.w,
+                      width: 1750.w,
                       height: 50.h,
                       child: ListView.builder(
                           physics: const NeverScrollableScrollPhysics(),
@@ -730,7 +730,7 @@ class _WordSpellScreenState extends State<WordSpellScreen> {
                       children: [
                         InkWell(
                           onTap: () {
-                            Get.offNamed(HomePage.routeName);
+                            Get.offAllNamed(BotNavBar.routeName);
                           },
                           child: Container(
                             width: 49.w,

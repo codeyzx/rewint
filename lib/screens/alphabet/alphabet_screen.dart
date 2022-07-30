@@ -7,10 +7,10 @@ import 'package:flutter_tts/flutter_tts.dart';
 import 'package:get/get.dart';
 import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/themes/app_colors.dart';
-import 'package:quizzle/models/alphabet_model.dart';
-import 'package:quizzle/screens/handwriting/handwriting_screen.dart';
-import 'package:quizzle/screens/home/home_page.dart';
+import 'package:rewint/configs/themes/app_colors.dart';
+import 'package:rewint/models/alphabet_model.dart';
+import 'package:rewint/screens/handwriting/handwriting_screen.dart';
+import 'package:rewint/widgets/botnavbar.dart';
 
 class AlphabetScreen extends StatefulWidget {
   const AlphabetScreen({Key? key}) : super(key: key);
@@ -172,7 +172,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: SizedBox(
-                      width: 2000.w,
+                      width: 420.w,
                       height: 50.h,
                       child: ListView.builder(
                           physics: const NeverScrollableScrollPhysics(),
@@ -316,29 +316,18 @@ class AlphabetScreenState extends State<AlphabetScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InkWell(
-                          onTap: () {
-                            Get.offNamed(HomePage.routeName);
-                            // Navigator.pushReplacement(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) =>
-                            //           HomePage(),
-                            //     ));
-                          },
-                          child: InkWell(
-                            onTap: () => Get.offNamed(HomePage.routeName),
-                            child: Container(
-                              width: 49.w,
-                              height: 49.h,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.r),
-                              ),
-                              child: Icon(
-                                Icons.home,
-                                color: Colors.black,
-                                size: 35.sp,
-                              ),
+                          onTap: () => Get.offAllNamed(BotNavBar.routeName),
+                          child: Container(
+                            width: 49.w,
+                            height: 49.h,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                            child: Icon(
+                              Icons.home,
+                              color: Colors.black,
+                              size: 35.sp,
                             ),
                           ),
                         ),
@@ -432,7 +421,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
                             ),
                             child: Center(
                               child: Text(
-                                'Klik untuk mulai menulis',
+                                'Cek Jawaban',
                                 style: subquestionTxt,
                               ),
                             ),
@@ -515,7 +504,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
                   SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: SizedBox(
-                      width: 2000.w,
+                      width: 1750.w,
                       height: 50.h,
                       child: ListView.builder(
                           physics: const NeverScrollableScrollPhysics(),
@@ -663,29 +652,18 @@ class AlphabetScreenState extends State<AlphabetScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InkWell(
-                          onTap: () {
-                            Get.offNamed(HomePage.routeName);
-                            // Navigator.pushReplacement(
-                            //     context,
-                            //     MaterialPageRoute(
-                            //       builder: (context) =>
-                            //           HomePage(),
-                            //     ));
-                          },
-                          child: InkWell(
-                            onTap: () => Get.offNamed(HomePage.routeName),
-                            child: Container(
-                              width: 49.w,
-                              height: 49.h,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(10.r),
-                              ),
-                              child: Icon(
-                                Icons.home,
-                                color: Colors.black,
-                                size: 35.sp,
-                              ),
+                          onTap: () => Get.offAllNamed(BotNavBar.routeName),
+                          child: Container(
+                            width: 49.w,
+                            height: 49.h,
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius: BorderRadius.circular(10.r),
+                            ),
+                            child: Icon(
+                              Icons.home,
+                              color: Colors.black,
+                              size: 35.sp,
                             ),
                           ),
                         ),
@@ -785,7 +763,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
                             ),
                             child: Center(
                               child: Text(
-                                'Klik untuk mulai menulis',
+                                'Cek Jawaban',
                                 style: subquestionTxt,
                               ),
                             ),
@@ -871,10 +849,10 @@ class AlphabetScreenState extends State<AlphabetScreen> {
 // import 'package:get/get.dart';
 // import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart';
 // import 'package:hexcolor/hexcolor.dart';
-// import 'package:quizzle/configs/themes/app_colors.dart';
-// import 'package:quizzle/screens/handwriting/handwriting_screen.dart';
-// import 'package:quizzle/screens/home/home_page.dart';
-// import 'package:quizzle/widgets/handwriting/activity_indicator.dart';
+// import 'package:rewint/configs/themes/app_colors.dart';
+// import 'package:rewint/screens/handwriting/handwriting_screen.dart';
+// import 'package:rewint/screens/home/home_page.dart';
+// import 'package:rewint/widgets/handwriting/activity_indicator.dart';
 // // ignore_for_file: prefer_const_constructors
 
 // class AlphabetUpperPage extends StatefulWidget {
@@ -1130,7 +1108,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
 //                 children: [
 //                   InkWell(
 //                     onTap: () {
-//                       Get.offNamed(HomePage.routeName);
+//                       Get.offAllNamed(BotNavBar.routeName);
 //                       // Navigator.pushReplacement(
 //                       //     context,
 //                       //     MaterialPageRoute(
@@ -1139,7 +1117,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
 //                       //     ));
 //                     },
 //                     child: InkWell(
-//                       onTap: () => Get.offNamed(HomePage.routeName),
+//                       onTap: () => Get.offAllNamed(BotNavBar.routeName),
 //                       child: Container(
 //                         width: 49.w,
 //                         height: 49.h,
@@ -1180,7 +1158,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
 //                                     'Dialog Dissmiss from callback $type');
 //                               },
 //                             ).show()
-//                           : AwesomeDialog(
+//                           : AwesomeDialog(,
 //                               context: context,
 //                               animType: AnimType.LEFTSLIDE,
 //                               headerAnimationLoop: false,
@@ -1209,7 +1187,7 @@ class AlphabetScreenState extends State<AlphabetScreen> {
 //                       ),
 //                       child: Center(
 //                         child: Text(
-//                           'Klik untuk mulai menulis',
+//                           'Cek Jawaban',
 //                           style: subquestionTxt,
 //                         ),
 //                       ),

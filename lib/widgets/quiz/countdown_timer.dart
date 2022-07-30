@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizzle/configs/configs.dart';
+import 'package:rewint/configs/configs.dart';
 
 class CountdownTimer extends StatelessWidget {
   const CountdownTimer({Key? key, this.color, required this.time})
@@ -19,10 +19,7 @@ class CountdownTimer extends StatelessWidget {
         const SizedBox(
           width: 5,
         ),
-        Text(
-          time,
-          style: countDownTimerTs(context).copyWith(color: color)
-        )
+        Text(time, style: countDownTimerTs(context).copyWith(color: color))
       ],
     );
   }

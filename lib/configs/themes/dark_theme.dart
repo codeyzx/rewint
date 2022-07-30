@@ -14,17 +14,15 @@ class DarkTheme with SubThemeData {
   ThemeData buildDarkTheme() {
     final ThemeData systemDarkTheme = ThemeData.dark();
     return systemDarkTheme.copyWith(
-       visualDensity: VisualDensity.adaptivePlatformDensity,
+        visualDensity: VisualDensity.adaptivePlatformDensity,
         scaffoldBackgroundColor: scaffoldBackgroundColor,
         splashColor: kPrimayColorDT.withOpacity(0.1),
         highlightColor: kPrimayColorDT.withOpacity(0.05),
         iconTheme: getIconTheme(),
-        textTheme: getTextThemes().apply(
-          bodyColor: mainTextColorDT,
-          displayColor: mainTextColorDT
-        ),
-        elevatedButtonTheme: ElevatedButtonThemeData(
-            style: getElavatedButtonTheme()),
+        textTheme: getTextThemes()
+            .apply(bodyColor: mainTextColorDT, displayColor: mainTextColorDT),
+        elevatedButtonTheme:
+            ElevatedButtonThemeData(style: getElavatedButtonTheme()),
         cardColor: cardColorDT,
         primaryColor: kPrimayColorDT);
   }

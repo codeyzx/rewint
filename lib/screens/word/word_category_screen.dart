@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/themes/app_colors.dart';
-import 'package:quizzle/screens/alphabet/alphabet_screen.dart';
-import 'package:quizzle/screens/word/word_spell_screen.dart';
+import 'package:rewint/configs/themes/app_colors.dart';
+import 'package:rewint/screens/alphabet/alphabet_screen.dart';
+import 'package:rewint/screens/word/word_spell_screen.dart';
 // ignore_for_file: prefer_const_constructors
 
 class WordCategoryScreen extends StatefulWidget {
@@ -71,8 +71,8 @@ class _WordCategoryScreenState extends State<WordCategoryScreen> {
               child: InkWell(
                 onTap: () {
                   Get.toNamed(AlphabetScreen.routeName, arguments: {
-                      'isUpperCase': false,
-                      'isWords': true,
+                    'isUpperCase': false,
+                    'isWords': true,
                   });
                 },
                 child: Container(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizzle/configs/configs.dart';
+import 'package:rewint/configs/configs.dart';
 
 const kHeaderTS = TextStyle(
     fontSize: 22, fontWeight: FontWeight.w700, color: kOnSurfaceTextColor);

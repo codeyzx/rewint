@@ -1,9 +1,9 @@
 import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/themes/app_colors.dart';
-import 'package:quizzle/screens/home/home_page.dart';
-import 'package:quizzle/widgets/common/circle_button.dart';
+import 'package:rewint/configs/themes/app_colors.dart';
+import 'package:rewint/screens/home/home_page.dart';
+import 'package:rewint/widgets/common/circle_button.dart';
 
 class AppIntroductionScreen extends StatelessWidget {
   const AppIntroductionScreen({Key? key}) : super(key: key);

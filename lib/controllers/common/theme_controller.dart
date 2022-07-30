@@ -1,13 +1,11 @@
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/utils/logger.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/utils/logger.dart';
 
 class ThemeController extends GetxController {
   late ThemeData _darkTheme;
   late ThemeData _lightTheme;
-
 
   @override
   void onInit() {
@@ -16,15 +14,15 @@ class ThemeController extends GetxController {
   }
 
   Future<void> initializeThemeData() async {
-    _darkTheme =  DarkTheme().buildDarkTheme();
+    _darkTheme = DarkTheme().buildDarkTheme();
     _lightTheme = LightTheme().buildLightTheme();
-   }
+  }
 
-  ThemeData getDarkTheme(){
+  ThemeData getDarkTheme() {
     return _darkTheme;
   }
 
-  ThemeData getLightheme(){
+  ThemeData getLightheme() {
     return _lightTheme;
   }
 

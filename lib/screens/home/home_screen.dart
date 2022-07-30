@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_zoom_drawer/flutter_zoom_drawer.dart';
 import 'package:get/get.dart';
 import 'package:liquid_pull_to_refresh/liquid_pull_to_refresh.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 import 'custom_drawer.dart';
 

@@ -1,10 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/controllers/auth_controller.dart';
-import 'package:quizzle/firebase/loading_status.dart';
-import 'package:quizzle/firebase/references.dart';
-import 'package:quizzle/models/models.dart';
-import 'package:quizzle/utils/logger.dart';
+import 'package:rewint/controllers/auth_controller.dart';
+import 'package:rewint/firebase/loading_status.dart';
+import 'package:rewint/firebase/references.dart';
+import 'package:rewint/models/models.dart';
+import 'package:rewint/utils/logger.dart';
 
 class LeaderBoardController extends GetxController {
   final leaderBoard = <LeaderBoardData>[].obs;
@@ -12,7 +12,7 @@ class LeaderBoardController extends GetxController {
   final loadingStatus = LoadingStatus.completed.obs;
 
   void getAll(String paperId) async {
-   loadingStatus.value = LoadingStatus.loading;
+    loadingStatus.value = LoadingStatus.loading;
     try {
       final QuerySnapshot<Map<String, dynamic>> _leaderBoardSnapShot =
           await getleaderBoard(paperId: paperId)
@@ -36,19 +36,17 @@ class LeaderBoardController extends GetxController {
     }
   }
 
-  void getMyScores(String paperId) async{
+  void getMyScores(String paperId) async {
     final user = Get.find<AuthController>().getUser();
-    
-    if(user == null){
+
+    if (user == null) {
       return;
     }
     try {
-      final DocumentSnapshot<Map<String, dynamic>> _leaderBoardSnapShot = await getleaderBoard(paperId: paperId).doc(user.email).get();
-      final _myScores =  LeaderBoardData.fromSnapShot(_leaderBoardSnapShot);
-      _myScores.user = UserData(
-        name: user.displayName!,
-        image: user.photoURL
-      );
+      final DocumentSnapshot<Map<String, dynamic>> _leaderBoardSnapShot =
+          await getleaderBoard(paperId: paperId).doc(user.email).get();
+      final _myScores = LeaderBoardData.fromSnapShot(_leaderBoardSnapShot);
+      _myScores.user = UserData(name: user.displayName!, image: user.photoURL);
       myScores.value = _myScores;
     } catch (e) {
       AppLogger.e(e);

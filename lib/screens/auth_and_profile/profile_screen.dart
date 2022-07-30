@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class ProfileScreen extends GetView<ProfileController> {
   const ProfileScreen({Key? key}) : super(key: key);
@@ -26,10 +26,11 @@ class ProfileScreen extends GetView<ProfileController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
-                    children:  [
+                    children: [
                       CircleAvatar(
                         radius: 35,
-                        foregroundImage: NetworkImage(_auth.getUser()!.photoURL!),
+                        foregroundImage:
+                            NetworkImage(_auth.getUser()!.photoURL!),
                       ),
                       const SizedBox(
                         width: 20,
@@ -54,10 +55,10 @@ class ProfileScreen extends GetView<ProfileController> {
             ),
             Expanded(
               child: Obx(
-               () =>  ContentArea(
+                () => ContentArea(
                   addPadding: false,
                   child: ListView.separated(
-                   padding: UIParameters.screenPadding,
+                    padding: UIParameters.screenPadding,
                     itemCount: controller.allRecentTest.length,
                     separatorBuilder: (BuildContext context, int index) {
                       return const SizedBox(
@@ -65,7 +66,8 @@ class ProfileScreen extends GetView<ProfileController> {
                       );
                     },
                     itemBuilder: (BuildContext context, int index) {
-                      return RecentQuizCard(recentTest: controller.allRecentTest[index]);
+                      return RecentQuizCard(
+                          recentTest: controller.allRecentTest[index]);
                     },
                   ),
                 ),

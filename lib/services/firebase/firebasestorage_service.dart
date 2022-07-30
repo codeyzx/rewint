@@ -1,10 +1,9 @@
-
 import 'package:get/get.dart';
-import 'package:quizzle/firebase/firebase_configs.dart';
-import 'package:quizzle/utils/utils.dart';
+import 'package:rewint/firebase/firebase_configs.dart';
+import 'package:rewint/utils/utils.dart';
 
-class FireBaseStorageService extends GetxService{
-   Future<String?> getImage(String? imageName) async {
+class FireBaseStorageService extends GetxService {
+  Future<String?> getImage(String? imageName) async {
     if (imageName == null) return null;
 
     try {

@@ -1,40 +1,40 @@
 {
   "project_info": {
-    "project_number": "170754159887",
-    "project_id": "quizzle-demo-9d60d",
-    "storage_bucket": "quizzle-demo-9d60d.appspot.com"
+    "project_number": "387456396160",
+    "project_id": "rewint-f218b",
+    "storage_bucket": "rewint-f218b.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:170754159887:android:1ef8ec47d6aaab26a63a7a",
+        "mobilesdk_app_id": "1:387456396160:android:d8b5f7aea16f3d3a302f65",
         "android_client_info": {
-          "package_name": "com.example.quizzledemo"
+          "package_name": "com.orbit.rewint"
         }
       },
       "oauth_client": [
         {
-          "client_id": "170754159887-vvnpt3dgoup0dqapep5vrhg4hti24279.apps.googleusercontent.com",
+          "client_id": "387456396160-cmg4evjidqjo1lndebjj4dmdhd07pfk2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAyzwFTXpqBkVKK4E6BSmNdgt9_r-gdfJ8"
+          "current_key": "AIzaSyDrX8saw5JG330211LnwuTw-U-E5hby5r4"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "170754159887-vvnpt3dgoup0dqapep5vrhg4hti24279.apps.googleusercontent.com",
+              "client_id": "387456396160-cmg4evjidqjo1lndebjj4dmdhd07pfk2.apps.googleusercontent.com",
               "client_type": 3
             },
             {
-              "client_id": "170754159887-22h800arlm77h6ak2mcdetlfoluqjnb6.apps.googleusercontent.com",
+              "client_id": "387456396160-8v5ghqis1nqapuvs8oeb7gk4b4bvmr7j.apps.googleusercontent.com",
               "client_type": 2,
               "ios_info": {
-                "bundle_id": "com.codefox.quizzle"
+                "bundle_id": "com.codefox.rewint"
               }
             }
           ]

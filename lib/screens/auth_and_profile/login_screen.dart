@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/auth_controller.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/auth_controller.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class LoginScreen extends GetView<AuthController> {
   const LoginScreen({Key? key}) : super(key: key);
@@ -58,31 +58,6 @@ class LoginScreen extends GetView<AuthController> {
                   ],
                 ),
               ),
-              MainButton(
-                onTap: () {
-                  controller.signInAnonymous();
-                },
-                color: Colors.black,
-                child: Stack(
-                  children: [
-                    Positioned(
-                        top: 0,
-                        bottom: 0,
-                        left: 0,
-                        child: SvgPicture.asset(
-                          'assets/icons/google.svg',
-                        )),
-                    Center(
-                      child: Text(
-                        'Sign in anonymously',
-                        style: TextStyle(
-                            color: Theme.of(context).primaryColor,
-                            fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ],
-                ),
-              )
             ],
           )),
     );

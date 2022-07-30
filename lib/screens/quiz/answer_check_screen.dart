@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/screens/quiz/result_screen.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/screens/quiz/result_screen.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class AnswersCheckScreen extends GetView<QuizController> {
   const AnswersCheckScreen({Key? key}) : super(key: key);
@@ -16,7 +16,9 @@ class AnswersCheckScreen extends GetView<QuizController> {
       extendBodyBehindAppBar: true,
       appBar: CustomAppBar(
         titleWidget: Obx(() => Text(
-            'Q. ${(controller.questionIndex.value + 1).toString().padLeft(2, '0')}', style: kAppBarTS,)),
+              'Q. ${(controller.questionIndex.value + 1).toString().padLeft(2, '0')}',
+              style: kAppBarTS,
+            )),
         showActionIcon: true,
         onMenuActionTap: () {
           Get.toNamed(Resultcreen.routeName);

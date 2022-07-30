@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/services/services.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/services/services.dart';
 
 class InitialBinding implements Bindings {
   @override
@@ -9,6 +9,6 @@ class InitialBinding implements Bindings {
     //Get.put(PapersDataUploader());
     Get.put(AuthController(), permanent: true);
     Get.put(NotificationService());
-    Get.lazyPut(() =>  FireBaseStorageService());
+    Get.lazyPut(() => FireBaseStorageService());
   }
 }

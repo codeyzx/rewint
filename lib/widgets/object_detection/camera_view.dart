@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_mlkit_commons/google_mlkit_commons.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:quizzle/main.dart';
+import 'package:rewint/main.dart';
 
 enum ScreenMode { liveFeed, gallery }
 

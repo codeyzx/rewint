@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/controllers/auth_controller.dart';
-import 'package:quizzle/firebase/references.dart';
-import 'package:quizzle/models/models.dart' show QuizPaperModel;
-import 'package:quizzle/screens/screens.dart' show QuizeScreen;
-import 'package:quizzle/services/firebase/firebasestorage_service.dart';
-import 'package:quizzle/utils/logger.dart';
+import 'package:rewint/controllers/auth_controller.dart';
+import 'package:rewint/firebase/references.dart';
+import 'package:rewint/models/models.dart' show QuizPaperModel;
+import 'package:rewint/screens/screens.dart' show QuizeScreen;
+import 'package:rewint/services/firebase/firebasestorage_service.dart';
+import 'package:rewint/utils/logger.dart';
 
 class QuizPaperController extends GetxController {
   @override
@@ -35,18 +35,28 @@ class QuizPaperController extends GetxController {
     }
   }
 
-  void navigatoQuestions({required QuizPaperModel paper, bool isTryAgain = false}) {
-    AuthController _authController = Get.find();
+  void navigatoQuestions(
+      {required QuizPaperModel paper, bool isTryAgain = false}) {
+    // AuthController _authController = Get.find();
 
-    if (_authController.isLogedIn()) {
-      if (isTryAgain) {
-        Get.back();
-        Get.offNamed(QuizeScreen.routeName, arguments: paper, preventDuplicates: false);
-      } else {
-        Get.toNamed(QuizeScreen.routeName, arguments: paper);
-      }
+    if (isTryAgain) {
+      Get.back();
+      Get.offNamed(QuizeScreen.routeName,
+          arguments: paper, preventDuplicates: false);
     } else {
-      _authController.showLoginAlertDialog();
+      Get.toNamed(QuizeScreen.routeName, arguments: paper);
     }
+
+    // if (_authController.isLogedIn()) {
+    //   if (isTryAgain) {
+    //     Get.back();
+    //     Get.offNamed(QuizeScreen.routeName,
+    //         arguments: paper, preventDuplicates: false);
+    //   } else {
+    //     Get.toNamed(QuizeScreen.routeName, arguments: paper);
+    //   }
+    // } else {
+    //   _authController.showLoginAlertDialog();
+    // }
   }
 }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/quiz_paper/quiz_papers_controller.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/quiz_paper/quiz_papers_controller.dart';
 
 class ImageGuessCategoryScreen extends GetView<QuizPaperController> {
   const ImageGuessCategoryScreen({Key? key}) : super(key: key);

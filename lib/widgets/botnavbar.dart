@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:quizzle/configs/configs.dart';
-// import 'package:quizzle/screens/auth_and_profile/profile_screen.dart';
-import 'package:quizzle/screens/home/home_page.dart';
-import 'package:quizzle/screens/profile/profile_screen.dart';
-import 'package:quizzle/screens/shop/shop_screen.dart';
+import 'package:rewint/configs/configs.dart';
+// import 'package:rewint/screens/auth_and_profile/profile_screen.dart';
+import 'package:rewint/screens/home/home_page.dart';
+import 'package:rewint/screens/profile/profile_screen.dart';
+import 'package:rewint/screens/shop/shop_screen.dart';
 // ignore_for_file: prefer_const_constructors
 
 class BotNavBar extends StatefulWidget {
@@ -48,7 +48,7 @@ class _BotNavBarState extends State<BotNavBar> {
                   children: [
                     Image.asset(
                       currentIndex == 0
-                          ? 'assets/images/home-nav-active.png'
+                          ? 'assets/images/home-navbar-active.png'
                           : 'assets/images/home-nav-off.png',
                       width: 30.w,
                       height: 30.h,

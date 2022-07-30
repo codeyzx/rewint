@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/firebase/loading_status.dart';
-import 'package:quizzle/screens/quiz/quiz_overview_screen.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/firebase/loading_status.dart';
+import 'package:rewint/screens/quiz/quiz_overview_screen.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class QuizeScreen extends GetView<QuizController> {
   const QuizeScreen({Key? key}) : super(key: key);
@@ -41,35 +41,6 @@ class QuizeScreen extends GetView<QuizController> {
             child: Obx(
               () => Column(
                 children: [
-                  // SizedBox(
-                  //   height: 100,
-                  //   child: GridView.builder(
-                  //       itemCount: controller.allQuestions.length,
-                  //       // shrinkWrap: true,
-                  //       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  //           crossAxisCount:
-                  //               UIParameters.getWidth(context) ~/ 75,
-                  //           childAspectRatio: 1,
-                  //           crossAxisSpacing: 8,
-                  //           mainAxisSpacing: 8),
-                  //       physics: const BouncingScrollPhysics(),
-                  //       itemBuilder: (_, index) {
-                  //         AnswerStatus? _answerStatus;
-                  //         if (controller.allQuestions[index].selectedAnswer !=
-                  //             null) {
-                  //           _answerStatus = AnswerStatus.answered;
-                  //         }
-                  //         return QuizNumberCard(
-                  //           isQuizScreen: true,
-                  //           index: index + 1,
-                  //           status: _answerStatus,
-                  //           onTap: () {
-                  //             controller.jumpToQuestion(index, isGoBack: false);
-                  //           },
-                  //         );
-                  //       }),
-                  // ),
-
                   if (controller.loadingStatus.value == LoadingStatus.loading)
                     const Expanded(
                         child: ContentArea(child: QuizScreenPlaceHolder())),

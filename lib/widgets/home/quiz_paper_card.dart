@@ -1,13 +1,12 @@
-
 import 'package:easy_separator/easy_separator.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/controllers/controllers.dart';
-import 'package:quizzle/controllers/quiz_paper/quiz_papers_controller.dart';
-import 'package:quizzle/models/quiz_paper_model.dart';
-import 'package:quizzle/screens/screens.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/controllers/controllers.dart';
+import 'package:rewint/controllers/quiz_paper/quiz_papers_controller.dart';
+import 'package:rewint/models/quiz_paper_model.dart';
+import 'package:rewint/screens/screens.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class QuizPaperCard extends GetView<QuizPaperController> {
   const QuizPaperCard({Key? key, required this.model}) : super(key: key);
@@ -25,9 +24,7 @@ class QuizPaperCard extends GetView<QuizPaperController> {
       child: InkWell(
         borderRadius: UIParameters.cardBorderRadius,
         onTap: () {
-          controller.navigatoQuestions(
-            paper: model
-          );
+          controller.navigatoQuestions(paper: model);
         },
         child: Padding(
             padding: const EdgeInsets.all(_padding),
@@ -45,7 +42,10 @@ class QuizPaperCard extends GetView<QuizPaperController> {
                           child: SizedBox(
                             width: 65,
                             height: 65,
-                            child: model.imageUrl == null ||  model.imageUrl!.isEmpty ? null : Image.network(model.imageUrl!),
+                            child: model.imageUrl == null ||
+                                    model.imageUrl!.isEmpty
+                                ? null
+                                : Image.network(model.imageUrl!),
                           )),
                     ),
                     const SizedBox(
@@ -98,13 +98,15 @@ class QuizPaperCard extends GetView<QuizPaperController> {
                     bottom: -_padding,
                     right: -_padding,
                     child: GestureDetector(
-                      behavior : HitTestBehavior.translucent,
+                      behavior: HitTestBehavior.translucent,
                       onTap: () {
-                       // Get.find<NotificationService>().showQuizCompletedNotification(id: 1, title: 'Sampole', body: 'Sample', imageUrl: model.imageUrl, payload: json.encode(model.toJson())  );
-                        Get.toNamed(LeaderBoardScreen.routeName, arguments:model );
+                        // Get.find<NotificationService>().showQuizCompletedNotification(id: 1, title: 'Sampole', body: 'Sample', imageUrl: model.imageUrl, payload: json.encode(model.toJson())  );
+                        Get.toNamed(LeaderBoardScreen.routeName,
+                            arguments: model);
                       },
                       child: Ink(
-                        padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 20),
+                        padding: const EdgeInsets.symmetric(
+                            vertical: 12, horizontal: 20),
                         child: const Icon(AppIcons.trophyoutline),
                         decoration: BoxDecoration(
                             borderRadius: const BorderRadius.only(

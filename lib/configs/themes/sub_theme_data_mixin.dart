@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:quizzle/configs/configs.dart';
+import 'package:rewint/configs/configs.dart';
 
 mixin SubThemeData {
   AppBarTheme getAppBarTheme() {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' hide Ink;
 import 'package:google_fonts/google_fonts.dart';
 import 'package:google_mlkit_digital_ink_recognition/google_mlkit_digital_ink_recognition.dart';
-import 'package:quizzle/widgets/handwriting/activity_indicator.dart';
+import 'package:rewint/widgets/handwriting/activity_indicator.dart';
 
 class HandwritingScreen extends StatefulWidget {
   const HandwritingScreen({Key? key}) : super(key: key);

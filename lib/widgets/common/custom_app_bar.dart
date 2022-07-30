@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/configs/configs.dart';
-import 'package:quizzle/screens/quiz/quiz_overview_screen.dart';
-import 'package:quizzle/widgets/widgets.dart';
+import 'package:rewint/configs/configs.dart';
+import 'package:rewint/screens/quiz/quiz_overview_screen.dart';
+import 'package:rewint/widgets/widgets.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   const CustomAppBar({
@@ -10,7 +10,8 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     this.title = '',
     this.showActionIcon = false,
     this.leading,
-    this.titleWidget, this.onMenuActionTap,
+    this.titleWidget,
+    this.onMenuActionTap,
   }) : super(key: key);
 
   final String title;
@@ -18,7 +19,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final bool showActionIcon;
   final Widget? leading;
   final VoidCallback? onMenuActionTap;
-  
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,9 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           child: Stack(
             children: [
               Positioned.fill(
-                child: titleWidget == null ? Center(child: Text(title, style: kAppBarTS)) : Center(child: titleWidget!),
+                child: titleWidget == null
+                    ? Center(child: Text(title, style: kAppBarTS))
+                    : Center(child: titleWidget!),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -45,9 +47,13 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                     Transform.translate(
                       offset: const Offset(10,
                           0), // transform to allign icons with body content =>  - CircularButton.padding
-                      child:  CircularButton(child: const Icon(AppIcons.menu), onTap: onMenuActionTap ?? (){
-                        Get.toNamed(QuizOverviewScreen.routeName);
-                      },),
+                      child: CircularButton(
+                        child: const Icon(AppIcons.menu),
+                        onTap: onMenuActionTap ??
+                            () {
+                              Get.toNamed(QuizOverviewScreen.routeName);
+                            },
+                      ),
                     )
                 ],
               ),

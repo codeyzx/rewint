@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:hexcolor/hexcolor.dart';
-import 'package:quizzle/configs/themes/app_colors.dart';
-import 'package:quizzle/controllers/quiz_paper/quiz_papers_controller.dart';
-import 'package:quizzle/screens/alphabet/alphabet_category.dart';
-import 'package:quizzle/screens/image_guess/image_guess_category_screen.dart';
-import 'package:quizzle/screens/math/math_category_screen.dart';
-import 'package:quizzle/screens/object_detection/object_detector_view.dart';
-import 'package:quizzle/screens/word/word_category_screen.dart';
-import 'package:quizzle/screens/word/word_spell_screen.dart';
+import 'package:rewint/configs/themes/app_colors.dart';
+import 'package:rewint/controllers/quiz_paper/quiz_papers_controller.dart';
+import 'package:rewint/screens/alphabet/alphabet_category.dart';
+import 'package:rewint/screens/image_guess/image_guess_category_screen.dart';
+import 'package:rewint/screens/math/math_category_screen.dart';
+import 'package:rewint/screens/object_detection/object_detector_view.dart';
+import 'package:rewint/screens/word/word_category_screen.dart';
+import 'package:rewint/screens/word/word_spell_screen.dart';
 
 class HomePage extends GetView<QuizPaperController> {
   const HomePage({Key? key}) : super(key: key);
@@ -67,7 +67,7 @@ class HomePage extends GetView<QuizPaperController> {
                             width: 127.w,
                             height: 127.h,
                             decoration: BoxDecoration(
-                              color: containerColor,
+                              color: HexColor('#2E294E').withOpacity(0.25),
                               borderRadius: BorderRadius.circular(13.r),
                               boxShadow: [
                                 BoxShadow(
@@ -88,7 +88,15 @@ class HomePage extends GetView<QuizPaperController> {
                                   height: 55.h,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: eclipseColor,
+                                    color:
+                                        HexColor('#2E294E').withOpacity(0.67),
+                                  ),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/belajar_huruf.png',
+                                      width: 50.w,
+                                      height: 50.h,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
@@ -117,7 +125,7 @@ class HomePage extends GetView<QuizPaperController> {
                             width: 127.w,
                             height: 127.h,
                             decoration: BoxDecoration(
-                              color: containerColor,
+                              color: HexColor('#329F5B').withOpacity(0.25),
                               borderRadius: BorderRadius.circular(13.r),
                               boxShadow: [
                                 BoxShadow(
@@ -138,7 +146,15 @@ class HomePage extends GetView<QuizPaperController> {
                                   height: 55.h,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: eclipseColor,
+                                    color:
+                                        HexColor('#329F5B').withOpacity(0.67),
+                                  ),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/belajar_kata.png',
+                                      width: 50.w,
+                                      height: 50.h,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
@@ -173,7 +189,7 @@ class HomePage extends GetView<QuizPaperController> {
                             width: 127.w,
                             height: 127.h,
                             decoration: BoxDecoration(
-                              color: containerColor,
+                              color: HexColor('#FF0000').withOpacity(0.25),
                               borderRadius: BorderRadius.circular(13.r),
                               boxShadow: [
                                 BoxShadow(
@@ -194,7 +210,15 @@ class HomePage extends GetView<QuizPaperController> {
                                   height: 55.h,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: eclipseColor,
+                                    color:
+                                        HexColor('#FF0000').withOpacity(0.26),
+                                  ),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/matematika.png',
+                                      width: 50.w,
+                                      height: 50.h,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
@@ -223,7 +247,7 @@ class HomePage extends GetView<QuizPaperController> {
                             width: 127.w,
                             height: 127.h,
                             decoration: BoxDecoration(
-                              color: containerColor,
+                              color: HexColor('#03CEA4').withOpacity(0.25),
                               borderRadius: BorderRadius.circular(13.r),
                               boxShadow: [
                                 BoxShadow(
@@ -244,7 +268,15 @@ class HomePage extends GetView<QuizPaperController> {
                                   height: 55.h,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: eclipseColor,
+                                    color:
+                                        HexColor('#03CEA4').withOpacity(0.67),
+                                  ),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/tebak_gambar.png',
+                                      width: 50.w,
+                                      height: 50.h,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
@@ -281,7 +313,7 @@ class HomePage extends GetView<QuizPaperController> {
                             width: 127.w,
                             height: 127.h,
                             decoration: BoxDecoration(
-                              color: containerColor,
+                              color: HexColor('#19297C').withOpacity(0.25),
                               borderRadius: BorderRadius.circular(13.r),
                               boxShadow: [
                                 BoxShadow(
@@ -302,7 +334,15 @@ class HomePage extends GetView<QuizPaperController> {
                                   height: 55.h,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: eclipseColor,
+                                    color:
+                                        HexColor('#19297C').withOpacity(0.25),
+                                  ),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/mengeja.png',
+                                      width: 50.w,
+                                      height: 50.h,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(
@@ -331,7 +371,7 @@ class HomePage extends GetView<QuizPaperController> {
                             width: 127.w,
                             height: 127.h,
                             decoration: BoxDecoration(
-                              color: containerColor,
+                              color: HexColor('#EAC435').withOpacity(0.25),
                               borderRadius: BorderRadius.circular(13.r),
                               boxShadow: [
                                 BoxShadow(
@@ -352,7 +392,15 @@ class HomePage extends GetView<QuizPaperController> {
                                   height: 55.h,
                                   decoration: BoxDecoration(
                                     shape: BoxShape.circle,
-                                    color: eclipseColor,
+                                    color:
+                                        HexColor('#EAC435').withOpacity(0.67),
+                                  ),
+                                  child: Center(
+                                    child: Image.asset(
+                                      'assets/images/mengenal_lingkungan.png',
+                                      width: 50.w,
+                                      height: 50.h,
+                                    ),
                                   ),
                                 ),
                                 SizedBox(

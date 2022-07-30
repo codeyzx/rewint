@@ -4,9 +4,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:quizzle/firebase/firebase_configs.dart';
-import 'package:quizzle/models/quiz_paper_model.dart';
-import 'package:quizzle/utils/logger.dart';
+import 'package:rewint/firebase/firebase_configs.dart';
+import 'package:rewint/models/quiz_paper_model.dart';
+import 'package:rewint/utils/logger.dart';
 
 const String folderName = '/assets/DB/papers';
 
@@ -20,7 +20,7 @@ class PapersDataUploader extends GetxController {
   final loadingStatus = LoadingStatus.loading.obs;
 
   uploadData() async {
-    loadingStatus.value = LoadingStatus.loading; 
+    loadingStatus.value = LoadingStatus.loading;
     final fi = FirebaseFirestore.instance;
 
     try {
@@ -48,22 +48,21 @@ class PapersDataUploader extends GetxController {
       var batch = fi.batch();
 
       for (var paper in quizPapers) {
-        batch.set(quizePaperFR.doc(paper.id), {
-          "title": paper.title,
-          "image_url": paper.imageUrl,
-          "Description": paper.description,
-          "time_seconds": paper.timeSeconds,
-          "questions_count" : paper.questions == null ? 0 : paper.questions!.length
-        }, 
-        
+        batch.set(
+          quizePaperFR.doc(paper.id),
+          {
+            "title": paper.title,
+            "image_url": paper.imageUrl,
+            "Description": paper.description,
+            "time_seconds": paper.timeSeconds,
+            "questions_count":
+                paper.questions == null ? 0 : paper.questions!.length
+          },
         );
 
         for (var questions in paper.questions!) {
-          
-          final questionPath = questionsFR(
-            paperId: paper.id,
-            questionsId: questions.id
-          );
+          final questionPath =
+              questionsFR(paperId: paper.id, questionsId: questions.id);
 
           batch.set(questionPath, {
             "question": questions.question,
@@ -71,12 +70,13 @@ class PapersDataUploader extends GetxController {
           });
 
           for (var answer in questions.answers) {
-            batch.set(questionPath.collection('answers').doc(answer.identifier), {"identifier": answer.identifier, "answer": answer.answer});
+            batch.set(questionPath.collection('answers').doc(answer.identifier),
+                {"identifier": answer.identifier, "answer": answer.answer});
           }
         }
       }
       await batch.commit();
-      loadingStatus.value = LoadingStatus.completed; 
+      loadingStatus.value = LoadingStatus.completed;
     } on Exception catch (e) {
       AppLogger.e(e);
     }

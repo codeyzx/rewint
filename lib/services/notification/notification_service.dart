@@ -4,9 +4,9 @@ import 'package:http/http.dart' as http;
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 import 'package:path_provider/path_provider.dart';
-import 'package:quizzle/models/models.dart';
-import 'package:quizzle/screens/screens.dart' show LeaderBoardScreen;
-import 'package:quizzle/utils/logger.dart';
+import 'package:rewint/models/models.dart';
+import 'package:rewint/screens/screens.dart' show LeaderBoardScreen;
+import 'package:rewint/utils/logger.dart';
 
 class NotificationService extends GetxService {
   final _notifications = FlutterLocalNotificationsPlugin();
