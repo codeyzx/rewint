@@ -1,0 +1,15 @@
+name: 🔨🧪 Build & Test
+
+permissions: write-all
+
+on:
+  pull_request:
+    branches:
+      - "main"
+    tags:
+      - "v*.*.*"
+
+jobs:
+  deploy:
+    name: 🔨 Deploy
+    uses: ./.github/workflows/deploy.yml
