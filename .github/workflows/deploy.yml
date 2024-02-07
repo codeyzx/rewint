@@ -22,7 +22,10 @@ jobs:
       - name: Setup Gradle
         uses: gradle/gradle-build-action@v3
       - name: Execute Gradle build
-        run: ./gradlew build && ./gradlew signingReport
+        run: |
+          cd android
+          ./gradlew build
+          ./gradlew signingReport
       - name: 🔨 Build APK
         run: |
           flutter build apk --split-per-abi --release --obfuscate --split-debug-info=./symbols/
